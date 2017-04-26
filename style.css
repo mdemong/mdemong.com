@@ -11,14 +11,30 @@ h1 {
 	color: #3C415A;
 	background-color: #AFC3EB;
 	font-size: 3em;
+	border-style: solid;
+	border-color: #3C415A;
+	border-width: 2px;
 }
 
 h5 {
 	font-size: 125%;
 	font-weight: normal;
+	background-color: #FFFFFF;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	margin-bottom: 0px;
 }
 
 img {
-	border-color: 
-	border: thick;
+	border-style: solid;
+	border-color: #3C415A;
+	border-width: 2px;
+	padding: 8px;
+	background-color: #AFC3EB;
+}
+
+p {
+	background-color: #FFFFFF;
+	margin: 0px;
+	padding: 16px;
 }
