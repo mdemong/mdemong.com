@@ -1,0 +1,16 @@
+body {
+	background-color: #E0E0E0;
+	font-family: Verdana, sans-serif;
+	text-align: center;
+	font-size: 100%;
+}
+
+h1 {
+	color: #3C415A;
+	background-color: #AFC3EB;
+	font-size: 3em;
+}
+
+img {
+	border: thick;
+}
