@@ -1,7 +1,7 @@
 
 
 body {
-	background-color: #E0E0E0;
+	background: #E0E0E0;
 	font-family: Verdana, sans-serif;
 	text-align: center;
 	font-size: 100%;
@@ -14,6 +14,7 @@ h1 {
 	border-style: solid;
 	border-color: #3C415A;
 	border-width: 2px;
+	border-radius: 8px;
 }
 
 h5 {
@@ -28,9 +29,10 @@ h5 {
 img {
 	border-style: solid;
 	border-color: #3C415A;
-	border-width: 2px;
+	border-width: 1px;
 	padding: 8px;
 	background-color: #AFC3EB;
+	border-radius: 8px
 }
 
 p {
