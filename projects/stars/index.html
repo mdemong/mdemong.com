@@ -3,20 +3,26 @@
 
 <head>
     <meta charset="utf-8" />
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <title>Page Title</title>
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <title>Starfield</title>
     <script src="js/three.min.js"></script>
     <style>
-        body { margin: 0; }
-        canvas { width: 100%; height: 100% }
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%
+        }
     </style>
 </head>
 
 <body>
+    <canvas id="jsCanvas"> 
+        A 3D starfield animation.
+    </canvas>
     <script src="js/stars.js"></script>
-    <p>This is my test text.</p>
 </body>
 
 </html>

@@ -16,9 +16,10 @@ function init() {
         addMultStars(-i);
     }
 
-    renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer = new THREE.WebGLRenderer({ antialias: true, canvas: jsCanvas });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
+
+    window.addEventListener("resize", onWindowResize, false);
 }
 
 function animate() {
@@ -36,7 +37,6 @@ function addMultStars(posZ) {
 }
 
 function addStar(posZ) {
-    console.log("Adding star");
     var starGeom = new THREE.SphereGeometry(0.1);
     var material = new THREE.MeshBasicMaterial;
     var star = new THREE.Mesh(starGeom, material);
@@ -44,7 +44,6 @@ function addStar(posZ) {
     posX = Math.random() * spread - (spread / 2);
     posY = Math.random() * spread - (spread / 2);
     star.position.set(posX, posY, posZ);
-    console.log(star);
     scene.add(star);
 }
 
@@ -52,4 +51,10 @@ function removeLayer() {
     for (let i = 0; i < density; i++) {
         scene.remove(scene.children[0]);
     }
+}
+
+function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize( window.innerWidth, window.innerHeight );
 }
