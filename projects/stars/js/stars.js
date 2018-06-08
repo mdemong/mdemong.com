@@ -37,7 +37,7 @@ function addMultStars(posZ) {
 }
 
 function addStar(posZ) {
-    var starGeom = new THREE.SphereGeometry(0.1);
+    var starGeom = new THREE.SphereBufferGeometry(0.1);
     var material = new THREE.MeshBasicMaterial;
     var star = new THREE.Mesh(starGeom, material);
 
