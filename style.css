@@ -43,7 +43,16 @@ p {
 }
 
 .topHeader {
-	background-image: linear-gradient(45deg,  hsl(302,99%,64%), hsl(265,100%,50%), hsl(191,100%,50%))
+	background-image: linear-gradient(45deg,  hsl(302,99%,64%), hsl(265,100%,50%), hsl(191,100%,50%));
+	font-family: 'Pacifico', cursive;
+	text-shadow: 3px 3px 10px black
+}
+
+.sectionHeader {
+	background-image: linear-gradient(45deg,  hsl(302,99%,64%), hsl(265,100%,50%), hsl(191,100%,50%));
+	font-family: 'Pacifico', cursive;
+	padding: 8px;
+	text-shadow: 2px 2px 2px black
 }
 
 .greyBackground {
