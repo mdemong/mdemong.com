@@ -1,18 +1,18 @@
-
+@import "MyPalette.css";
 
 body {
-	background: #E0E0E0;
+	/* background: #E0E0E0; */
 	font-family: Verdana, sans-serif;
 	text-align: center;
 	font-size: 100%;
 }
 
 h1 {
-	color: #3C415A;
-	background-color: #AFC3EB;
+	/* color: #3C415A; */
+	/* background-color: #AFC3EB; */
 	font-size: 3em;
 	border-style: solid;
-	border-color: #3C415A;
+	border-color: #FFFFFF;
 	border-width: 2px;
 	border-radius: 8px;
 }
@@ -20,7 +20,7 @@ h1 {
 h5 {
 	font-size: 125%;
 	font-weight: normal;
-	background-color: #FFFFFF;
+	/* background-color: #FFFFFF; */
 	padding-top: 16px;
 	padding-bottom: 16px;
 	margin-bottom: 0px;
@@ -31,12 +31,20 @@ img {
 	border-color: #3C415A;
 	border-width: 1px;
 	padding: 8px;
-	background-color: #AFC3EB;
+	/* background-color: #AFC3EB; */
 	border-radius: 8px
 }
 
 p {
-	background-color: #FFFFFF;
+	/* background-color: #FFFFFF; */
 	margin: 0px;
 	padding: 16px;
+}
+
+.topHeader {
+	background-image: linear-gradient(45deg,  hsl(302,99%,64%), hsl(265,100%,50%), hsl(191,100%,50%))
+}
+
+.greyBackground {
+	background-color: hsl(0,0%,10%)
 }
