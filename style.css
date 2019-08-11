@@ -15,6 +15,7 @@ h1 {
 	border-color: #FFFFFF;
 	border-width: 2px;
 	border-radius: 8px;
+	padding: 16px
 }
 
 h5 {
@@ -47,4 +48,9 @@ p {
 
 .greyBackground {
 	background-color: hsl(0,0%,10%)
+}
+
+.content {
+	max-width: 1200px;
+	margin: auto;
 }
