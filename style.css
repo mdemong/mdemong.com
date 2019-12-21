@@ -12,7 +12,9 @@ body {
 .titleText {
 	position: absolute;
 	font-family: 'Pacifico', cursive;
-	text-shadow: 1px 1px 5px hsl(302,99%,64%), 0px 0px 14px hsl(265,100%,50%), -1px -1px 5px hsl(191,100%,50%) ;
+	text-shadow: 1px 1px 2px black,
+				 1px 1px 10px hsl(302,99%,64%), 
+				 -1px -1px 10px hsl(191,100%,50%);
 	font-size: 4em;
 	z-index: 1;
 }
