@@ -157,7 +157,7 @@ function resizeCanvasToDisplaySize() {
     // you must pass false here or three.js sadly fights the browser
     
     renderer.setSize(width, height, false);
-    // composer.setSize(width, height, false);
+    composer.setSize(width, height, false);
     
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
