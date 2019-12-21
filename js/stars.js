@@ -1,7 +1,7 @@
 const STAR_SIZE = 0.2;
 const clock = new THREE.Clock();
 
-let camera, scene, composer;
+let camera, scene, composer, renderer;
 let nearClip = 0.1
 let farClip = 100;
 let density = 10;
@@ -10,6 +10,8 @@ let spread = 500;
 let abbEffect, abbEffectPass, renderPass, bloomEffectPass;
 let abbIndex = 0;
 let fog;
+
+let sizeChanged = true;
 
 // Treat like a queue; push and shift 
 let stars = []
@@ -23,6 +25,7 @@ function init() {
 
     camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, nearClip, farClip);
     camera.position.set(0, 0, 0);
+
     for (let i = 0; i < farClip; i += speed) {
         addMultStars(-i);
     }
@@ -42,10 +45,10 @@ function init() {
     // console.log(abbEffectPass);
     // console.log(renderPass);
 
-    
-    composer = new POSTPROCESSING.EffectComposer(new THREE.WebGLRenderer({ antialias: true, canvas: titleCanvas }));
+    renderer = new THREE.WebGLRenderer({ antialias: true, canvas: titleCanvas });
+    composer = new POSTPROCESSING.EffectComposer(renderer);
     let canvas = composer.renderer.domElement;
-    composer.setSize(canvas.clientWidth, canvas.clientHeight);
+    // composer.setSize(canvas.clientWidth, canvas.clientHeight, false);
 
     composer.addPass(renderPass);
     composer.addPass(bloomEffectPass);
@@ -55,12 +58,12 @@ function init() {
     bloomEffectPass.renderToScreen = false;
     abbEffectPass.renderToScreen = true;
     
-    window.addEventListener('resize', resize, false);
+    // window.addEventListener('resize', resize, false);
 }
 
 function animate() {
 
-    // resizeCanvasToDisplaySize();
+    resizeCanvasToDisplaySize();
 
     deltaT = clock.getDelta()
     requestAnimationFrame(animate);
@@ -112,12 +115,29 @@ function removeLayer() {
 
 function resize() {
     // update the size
-    renderer.setSize(window.innerWidth, window.innerHeight)
+    // canvas.width = window.innerWidth;
+    // canvas.height = window.innerHeight;
+    // composer.setSize(canvas.clientWidth, canvas.clientHeight)
+
+    let canvas = composer.renderer.domElement;
+    
+    // // Check if the canvas is not the same size.
+    // if (canvas.width  != canvas.clientWidth || canvas.height != canvas.clientHeight) {
+    //     // Make the canvas the same size
+    //     canvas.width  = canvas.clientWidth;
+    //     canvas.height = canvas.clientHeight;
+    // }
+
+    if(instance.renderer3D)
+        instance.renderer3D.setSize(instance.dom.clientWidth, instance.dom.clientHeight);
+    if(instance.composer)
+        instance.composer.setSize(instance.dom.clientWidth, instance.dom.clientHeight);
 
     // update the camera
-    const canvas = composer.renderer.domElement
-    camera.aspect = canvas.clientWidth/canvas.clientHeight
-    camera.updateProjectionMatrix()
+    camera.aspect = canvas.clientWidth/canvas.clientHeight;
+    composer.setSize(canvas.clientWidth, canvas.clientHeight);
+    camera.updateProjectionMatrix();
+    console.log(canvas.clientWidth, canvas.clientHeight);
 }
 
 // function onWindowResize() {
@@ -127,20 +147,19 @@ function resize() {
 // }
 
 
-// // From https://stackoverflow.com/a/45046955
-// function resizeCanvasToDisplaySize() {
-//     const canvas = composer.renderer.domElement;
-//     // look up the size the canvas is being displayed
-//     const width = canvas.clientWidth;
-//     const height = canvas.clientHeight;
+// From https://stackoverflow.com/a/45046955
+function resizeCanvasToDisplaySize() {
+    const canvas = renderer.domElement;
+    // look up the size the canvas is being displayed
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
   
-//     // adjust displayBuffer size to match
-//     if (canvas.width !== width || canvas.height !== height) {
-//       // you must pass false here or three.js sadly fights the browser
-//       composer.setSize(width, height, false);
-//       camera.aspect = width / height;
-//       camera.updateProjectionMatrix();
+    // you must pass false here or three.js sadly fights the browser
+    
+    renderer.setSize(width, height, false);
+    // composer.setSize(width, height, false);
+    
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
   
-//       // update any render target sizes here
-//     }
-//   }
+  }
