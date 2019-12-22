@@ -1,10 +1,10 @@
-const STAR_SIZE = 0.2;
+const STAR_SIZE = .75;
 const clock = new THREE.Clock();
 
 let camera, scene, composer, renderer;
 let nearClip = 0.1
 let farClip = 100;
-let density = 10;
+let density = 2;
 let speed = 0.2;
 let spread = 500;
 let abbEffect, abbEffectPass, renderPass, bloomEffectPass;
@@ -134,7 +134,7 @@ function resize() {
         instance.composer.setSize(instance.dom.clientWidth, instance.dom.clientHeight);
 
     // update the camera
-    camera.aspect = canvas.clientWidth/canvas.clientHeight;
+    camera.aspect = canvas.clientWidth / canvas.clientHeight;
     composer.setSize(canvas.clientWidth, canvas.clientHeight);
     camera.updateProjectionMatrix();
     console.log(canvas.clientWidth, canvas.clientHeight);
