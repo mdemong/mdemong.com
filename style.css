@@ -81,9 +81,14 @@ canvas {
 	margin: 0px;
 }
 
-.text {
-	padding-right: 8em;
-	padding-left: 8em;
-	font-size: large;
-	text-align: justify;
+.paragraph {
+	font-size: 125%;
+	text-align: left;
+	line-height: 175%;
+}
+
+.sectionBody {
+	margin-top: 2em;
+	padding-right: 15%;
+	padding-left: 15%;
 }
