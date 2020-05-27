@@ -31,6 +31,7 @@ body {
 	display: flex;
 	justify-content:center;
 	align-items:center;
+	margin-top: 16px;
 	/* padding: 96px */
 }
 
@@ -64,7 +65,7 @@ body {
 
 .bodyBox {
 	background-color: hsl(0,0%,10%);
-	padding-bottom: 24px
+	padding-bottom: 24px;
 }
 
 
@@ -78,4 +79,16 @@ canvas {
 	height: 100%;
 	padding: 0px;
 	margin: 0px;
+}
+
+.paragraph {
+	font-size: 125%;
+	text-align: left;
+	line-height: 175%;
+}
+
+.sectionBody {
+	margin-top: 2em;
+	padding-right: 15%;
+	padding-left: 15%;
 }
