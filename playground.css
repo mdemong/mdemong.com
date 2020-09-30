@@ -1,0 +1,6 @@
+.container {
+    display: flex;
+    margin: 50;
+    padding: 100;
+    /* background-color: hsl(100, 50, 50); */
+}
