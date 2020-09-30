@@ -8,50 +8,58 @@ hsl(302,99%,64%);
 hsl(0,0%,0%);
 */
 
-.colorPrimary{
-  color:hsl(265,100%,50%);
-}
-.backgroundPrimary{
-  background-color:hsl(265,100%,50%);
-}
-.SVGcolorPrimary{
-  fill:hsl(265,100%,50%);
+.colorPrimary {
+  color: hsl(265, 100%, 50%);
 }
 
-.colorSecondary{
-  color:hsl(191,100%,50%);
-}
-.backgroundSecondary{
-  background-color:hsl(191,100%,50%);
-}
-.SVGcolorSecondary{
-  fill:hsl(191,100%,50%);
+.backgroundPrimary {
+  background-color: hsl(265, 100%, 50%);
 }
 
-.colorAccent{
-  color:hsl(302,99%,64%);
-}
-.backgroundAccent{
-  background-color:hsl(302,99%,64%);
-}
-.SVGcolorAccent{
-  fill:hsl(302,99%,64%);
+.SVGcolorPrimary {
+  fill: hsl(265, 100%, 50%);
 }
 
-.colorDark{
-  color:hsl(0,0%,0%);
+.colorSecondary {
+  color: hsl(191, 100%, 50%);
 }
-.backgroundDark{
-  background-color:hsl(0,0%,0%);
+
+.backgroundSecondary {
+  background-color: hsl(191, 100%, 50%);
 }
-.SVGcolorDark{
-  fill:hsl(0,0%,0%);
+
+.SVGcolorSecondary {
+  fill: hsl(191, 100%, 50%);
+}
+
+.colorAccent {
+  color: hsl(302, 99%, 64%);
+}
+
+.backgroundAccent {
+  background-color: hsl(302, 99%, 64%);
+}
+
+.SVGcolorAccent {
+  fill: hsl(302, 99%, 64%);
+}
+
+.colorDark {
+  color: hsl(0, 0%, 0%);
+}
+
+.backgroundDark {
+  background-color: hsl(0, 0%, 0%);
+}
+
+.SVGcolorDark {
+  fill: hsl(0, 0%, 0%);
 }
 
 .colorLight {
-  color:hsl(0, 0%, 100%)
-}
-.backgroundLight {
-  background-color:hsl(0, 0%, 100%)
+  color: hsl(0, 0%, 100%)
 }
 
+.backgroundLight {
+  background-color: hsl(0, 0%, 100%)
+}

@@ -8,6 +8,10 @@ body {
 	font-size: 100%;
 }
 
+p {
+	/* text-align: left; */
+}
+
 .main-nav {
 	/* background-image: linear-gradient(45deg,  hsl(302,99%,64%), hsl(265,100%,50%), hsl(191,100%,50%)); */
 	background: rgb(117, 117, 117);
@@ -19,7 +23,7 @@ body {
 }
 
 .nav-button {
-	background-color: hsl(0,0%,10%);
+	background-color: hsl(0, 0%, 10%);
 	padding: 12px;
 	margin-left: 4px;
 	margin-right: 4px;
@@ -29,7 +33,7 @@ body {
 }
 
 .nav-link {
-	color:white;
+	color: white;
 	font-size: large;
 	text-decoration: none;
 }
@@ -39,8 +43,8 @@ body {
 	position: absolute;
 	font-family: 'Pacifico', cursive;
 	text-shadow: 1px 1px 2px black,
-				 1px 1px 7px hsl(302,99%,64%), 
-				 -1px -1px 7px hsl(191,100%,50%);
+		1px 1px 7px hsl(302, 99%, 64%),
+		-1px -1px 7px hsl(191, 100%, 50%);
 	font-size: 4em;
 	z-index: 1;
 }
@@ -55,15 +59,15 @@ body {
 	border-style: solid;
 	border-width: 1px;
 	display: flex;
-	justify-content:center;
-	align-items:center;
+	justify-content: center;
+	align-items: center;
 	margin-top: 16px;
 	/* padding: 96px */
 }
 
 
 .topHeader {
-	background-image: linear-gradient(45deg,  hsl(302,99%,64%), hsl(265,100%,50%), hsl(191,100%,50%));
+	background-image: linear-gradient(45deg, hsl(302, 99%, 64%), hsl(265, 100%, 50%), hsl(191, 100%, 50%));
 	font-family: 'Pacifico', cursive;
 	text-shadow: 3px 3px 10px black;
 	font-size: 3em;
@@ -74,7 +78,7 @@ body {
 
 
 .sectionHeader {
-	background-image: linear-gradient(45deg,  hsl(302,99%,64%), hsl(265,100%,50%), hsl(191,100%,50%));
+	background-image: linear-gradient(45deg, hsl(302, 99%, 64%), hsl(265, 100%, 50%), hsl(191, 100%, 50%));
 	font-family: 'Pacifico', cursive;
 	padding: 8px;
 	text-shadow: 2px 2px 2px black
@@ -90,8 +94,8 @@ body {
 
 
 .bodyBox {
-	background-color: hsl(0,0%,10%);
-	padding-bottom: 24px;
+	background-color: hsl(0, 0%, 10%);
+	padding-bottom: 3em;
 }
 
 
@@ -108,13 +112,17 @@ canvas {
 }
 
 .paragraph {
-	font-size: 125%;
+	font-size: 1.2em;
+	line-height: 1.66em;
 	text-align: left;
-	line-height: 175%;
 }
 
 .sectionBody {
-	margin-top: 2em;
+	margin-top: 3em;
 	padding-right: 15%;
 	padding-left: 15%;
+}
+
+.img {
+	margin: 1em;
 }
